@@ -14,10 +14,10 @@ def ejercicio_1():
     NC=95
     e= 0.03
     P=0.05
-    Q= 1 - P
 
     Z = estimacion_parametros.calcular_z(NC)
-    print("tamaño de muestra: " + str(estimacion_parametros.calcular_tamanio_muestra(Z, P, Q, e)))
+    print("z: " + str(Z))
+    print("tamaño de muestra: " + str(estimacion_parametros.calcular_tamanio_muestra(Z, P, e)))
 
 
 # Supongamos una población que se distribuye normal, con media igual
