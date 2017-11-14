@@ -32,6 +32,3 @@ print("n1:" + str(muestreo.afijacion_optima([1800,1500,1200,500],[4.2,5.5,7.1,10
 print("n2:" + str(muestreo.afijacion_optima([1800,1500,1200,500],[4.2,5.5,7.1,10.3],250,1)))
 print("n3:" + str(muestreo.afijacion_optima([1800,1500,1200,500],[4.2,5.5,7.1,10.3],250,2)))
 print("n4:" + str(muestreo.afijacion_optima([1800,1500,1200,500],[4.2,5.5,7.1,10.3],250,3)))
-
-
-print medidas.varianza([1,2,3,3,4,5])
