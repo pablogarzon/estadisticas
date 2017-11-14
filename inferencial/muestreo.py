@@ -18,18 +18,18 @@ def promedio_ponderado(arrN, arrx):
 
     return Nx/sumN
 
-def af_igual(n, r):
+def afijacion_igual(n, r):
     """
     @n: tamaño de muestra
     @r: cantidad de estratos
     """
     return n/r
 
-def af_prop(Ni, N, n):
+def afijacion_prop(Ni, N, n):
     # (Ni/N)*n
     return int((Ni*1.0/N)*n)
 
-def af_optima(arrN, arrO, n, estrato):
+def afijacion_optima(arrN, arrO, n, estrato):
     """
     @arrN: array que representa a N de los estratos
     @arrO: array que representa a la desviacion estandard de los estratos

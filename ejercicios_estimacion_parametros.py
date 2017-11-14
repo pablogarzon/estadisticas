@@ -1,5 +1,5 @@
 # coding=utf-8
-from estimacion_estadistica import estimacion_parametros
+from inferencial import estimacion
 
 
 # ¿A cuantas familias tendriamos que estudiar para conocer la
@@ -15,9 +15,9 @@ def ejercicio_1():
     e= 0.03
     P=0.05
 
-    Z = estimacion_parametros.calcular_z(NC)
+    Z = estimacion.calcular_z(NC)
     print("z: " + str(Z))
-    print("tamaño de muestra: " + str(estimacion_parametros.calcular_tamanio_muestra(Z, P, e)))
+    print("tamaño de muestra: " + str(estimacion.calcular_tamanio_muestra(Z, P, e)))
 
 
 # Supongamos una población que se distribuye normal, con media igual
