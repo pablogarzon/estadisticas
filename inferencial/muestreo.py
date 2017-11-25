@@ -2,21 +2,21 @@
 import math
 
 
-def promedio_ponderado(arrN, arrx):
+def promedio_ponderado(arr_N, arr_x):
     """
-    @arrN: array que representa a N de los estratos
+    @arr_N: array que representa a N de los estratos
     @arrx: array que representa a las medias de los estratos
     """
-    #∑(Ni*x)/∑Ni
+    #∑(Nᵢ*x)/∑Nᵢ
 
     Nx=0
-    sumN=0
+    sum_N=0
 
-    for i in list(range(len(arrN))):
-        sumN+=arrN[i]
-        Nx+=arrN[i]*arrx[i]
+    for i in list(range(len(arr_N))):
+        sum_N += arr_N[i]
+        Nx += arr_N[i] * arr_x[i]
 
-    return Nx/sumN
+    return Nx/sum_N
 
 def afijacion_igual(n, r):
     """
@@ -26,21 +26,21 @@ def afijacion_igual(n, r):
     return n/r
 
 def afijacion_prop(Ni, N, n):
-    # (Ni/N)*n
+    # (Nᵢ/N)*n
     return int((Ni*1.0/N)*n)
 
-def afijacion_optima(arrN, arrO, n, estrato):
+def afijacion_optima(arr_N, arr_O, n, estrato):
     """
-    @arrN: array que representa a N de los estratos
-    @arrO: array que representa a la desviacion estandard de los estratos
+    @arr_N: array que representa a N de los estratos
+    @arr_O: array que representa a la desviacion estandard de los estratos
     @n: n
     @estrato: nro de estrato
     """
-    #((Ni*Oi)/∑(Ni*Oi))*n
+    #((Nᵢ*Oᵢ)/∑(Nᵢ*Oᵢ))*n
 
     sum_NiOi = 0
 
-    for i in list(range(len(arrN))):
-        sum_NiOi += arrN[i]*arrO[i]
+    for i in list(range(len(arr_N))):
+        sum_NiOi += arr_N[i] * arr_O[i]
 
-    return int(((arrN[estrato]* arrO[estrato])*1.0/sum_NiOi)*n)
+    return int(((arr_N[estrato]*arr_O[estrato])*1.0/sum_NiOi)*n)
