@@ -8,7 +8,7 @@ def media(arr):
     for xi in arr:
         sum_xi += xi
 
-    return sum_xi/len(arr)
+    return round(sum_xi/len(arr),2)
 
 def mediana(arr):
     #(n + 1)/2
@@ -17,14 +17,14 @@ def mediana(arr):
     arr.sort()
     x = (len(arr) + 1)/2
 
-    if arr % 2 == 0:
-        me1 = round(x)
-        me2 = math.ceil(x)
+    if (len(arr) % 2 == 0):
+        me1 = int(x) - 1
+        me2 = math.ceil(x) - 1
         me = (arr[me1] + arr[me2])/2
     else:
         me = arr[x]
 
-    return me
+    return round(me,2)
 
 def varianza(arr):
     #s² = (∑xᵢ²/n) - ̅x²
@@ -33,7 +33,7 @@ def varianza(arr):
     for xi in arr:
         sum_xx += xi * xi
 
-    return sum_xx/len(arr) - (media(arr) * media(arr))
+    return round(sum_xx/len(arr) - (media(arr) * media(arr)),2)
 
 def desv_standard(arr):
     #√s
@@ -51,4 +51,4 @@ def asimetria(arr):
 
     result = (sum_ / len(arr)) / (deviation * deviation * deviation)
 
-    return result
+    return round(result,2)
