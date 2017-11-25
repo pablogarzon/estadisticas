@@ -12,8 +12,8 @@ def calcular_tamanio_muestra(Z, P, e):
     @P valor esperado
     @e error max permitido
     """
-    Q= 1 - P
     # (Z² * P * Q) / e²
+    Q= 1 - P
     n0= (Z*Z*P*Q)/(e*e)
     return int(math.ceil(n0))
 

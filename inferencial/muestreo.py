@@ -5,7 +5,7 @@ import math
 def promedio_ponderado(arr_N, arr_x):
     """
     @arr_N: array que representa a N de los estratos
-    @arrx: array que representa a las medias de los estratos
+    @arr_x: array que representa a las medias de los estratos
     """
     #∑(Nᵢ*x)/∑Nᵢ
 
