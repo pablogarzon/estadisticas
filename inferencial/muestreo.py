@@ -12,7 +12,7 @@ def promedio_ponderado(arrN, arrx):
     Nx=0
     sumN=0
 
-    for i in xrange(0,len(arrN)):
+    for i in list(range(len(arrN))):
         sumN+=arrN[i]
         Nx+=arrN[i]*arrx[i]
 
@@ -40,7 +40,7 @@ def afijacion_optima(arrN, arrO, n, estrato):
 
     sum_NiOi = 0
 
-    for i in xrange(0,len(arrN)):
+    for i in list(range(len(arrN))):
         sum_NiOi += arrN[i]*arrO[i]
 
     return int(((arrN[estrato]* arrO[estrato])*1.0/sum_NiOi)*n)
