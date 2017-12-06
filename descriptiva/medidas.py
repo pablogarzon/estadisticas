@@ -26,6 +26,24 @@ def mediana(arr):
 
     return round(me,2)
 
+def moda(arr):
+    max_ = 1
+    mode = 0
+    dict_ = dict()
+
+    arr.sort()
+    for i in list(range(len(arr))):
+        if arr[i] in dict_:
+            int count = dict_[arr[i]]
+            count++
+            dict_[arr[i]] = count
+            if count > max:
+                max = count
+                mode = arr[i]
+        else:
+            dict_[arr[i]] = 1
+    return mode
+
 def varianza(arr):
     #s² = (∑xᵢ²/n) - ̅x²
 

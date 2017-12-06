@@ -1,2 +1,2 @@
 # estadisticas
-conjunto de métodos útiles para realizar prácticas de cálculo de estadísticas y probabilidades
+este es un proyecto que realizo a modo de estudio para rendir probabilidades y estadísticas, contiene un conjunto de métodos para comprender las formulas y algoritmos de cálculo.
