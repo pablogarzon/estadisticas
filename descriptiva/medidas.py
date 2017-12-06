@@ -34,11 +34,11 @@ def moda(arr):
     arr.sort()
     for i in list(range(len(arr))):
         if arr[i] in dict_:
-            int count = dict_[arr[i]]
-            count++
+            count = dict_[arr[i]]
+            count = count + 1
             dict_[arr[i]] = count
-            if count > max:
-                max = count
+            if count > max_:
+                max_ = count
                 mode = arr[i]
         else:
             dict_[arr[i]] = 1

@@ -8,3 +8,6 @@ print("media: " + str(medidas.media(arr)))
 arr2=[9,6,2,5,18,12]
 
 print("mediana: " + str(medidas.mediana(arr2)))
+
+
+print("moda: " + str(medidas.moda(arr)))
