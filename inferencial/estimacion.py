@@ -8,21 +8,24 @@ def calcular_z(NC=95):
 
 def calcular_tamanio_muestra(Z, P, e):
     """
-    @z factor probabilistico
-    @P valor esperado
-    @e error max permitido
+    #(Z² * P * Q) / e²
+
+    argumentos:
+    @Z -- factor probabilistico
+    @P -- valor esperado
+    @e -- error max permitido
     """
-    # (Z² * P * Q) / e²
     Q= 1 - P
     n0= (Z*Z*P*Q)/(e*e)
     return int(math.ceil(n0))
 
 def calcular_tamanio_muestra_ajustado(Z, P, N, e):
     """
-    @Z factor probabilistico
-    @P valor esperado
-    @N tamaño de población
-    @e error max permitido
+    argumentos:
+    @Z -- factor probabilistico
+    @P -- valor esperado
+    @N -- tamaño de población
+    @e -- error max permitido
     """
     Q= 1 - P
     n0= calular_tamanio_muestra(Z, P, e)
