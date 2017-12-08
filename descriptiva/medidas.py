@@ -62,6 +62,19 @@ def desv_standard(arr):
     """
     return round(math.sqrt(varianza(arr)),2)
 
+def coeficiente_variacion(arr):
+    """
+    Coeficiente de Variación
+    - 0% al 19%  variabilidad baja
+    - 20% al 59% variabilidad moderada
+    - 60% al 89% variabilidad alta
+    - 90% y superior variabilidad muy alta
+    """
+    dv = desv_standard(arr)
+    me = media(arr)
+
+    return dv/me
+
 def asimetria(arr):
     """
     # sₖ = (∑(xᵢ - ̅x)³/n)/s³
@@ -76,3 +89,14 @@ def asimetria(arr):
     result = (sum_ / len(arr)) / (deviation * deviation * deviation)
 
     return round(result,2)
+
+def curtosis(arr):
+    """
+    indica el grado de apuntalamiento de una distribución
+    # sₖ = ((∑(xᵢ - ̅x)⁴ * ⨍ᵢ)/n)/s⁴
+
+    resultado:
+    g = 0 (g ± 0.5) -> distribución mesocúrtica (dist. normal)
+    g > 0 -> distribución leptocúrtica (dist. estrecha)
+    g < 0 -> distribución platicúrtica (dist. ancha)
+    """

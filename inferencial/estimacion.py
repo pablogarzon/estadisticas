@@ -6,7 +6,7 @@ def calcular_z(NC=95):
      z_alfa2 = (1 + NC*1.0/100)/2
      return round(stats.norm.ppf(z_alfa2),2)
 
-def calcular_tamanio_muestra(Z, P, e):
+def tamanio_muestra(Z, P, e):
     """
     #(Z² * P * Q) / e²
 
@@ -19,7 +19,7 @@ def calcular_tamanio_muestra(Z, P, e):
     n0= (Z*Z*P*Q)/(e*e)
     return int(math.ceil(n0))
 
-def calcular_tamanio_muestra_ajustado(Z, P, N, e):
+def tamanio_muestra_ajustado(Z, P, N, e):
     """
     argumentos:
     @Z -- factor probabilistico

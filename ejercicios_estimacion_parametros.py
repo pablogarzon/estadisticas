@@ -17,7 +17,7 @@ def ejercicio_1():
 
     Z = estimacion.calcular_z(NC)
     print("z: " + str(Z))
-    print("tamaño de muestra: " + str(estimacion.calcular_tamanio_muestra(Z, P, e)))
+    print("tamaño de muestra: " + str(estimacion.tamanio_muestra(Z, P, e)))
 
 
 # Supongamos una población que se distribuye normal, con media igual
