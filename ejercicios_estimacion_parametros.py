@@ -33,7 +33,10 @@ def ejercicio_2():
     x0 = 500 - 6
     x1 = 500 + 6
 
-
+def ejercicio_3():
+    arr = estimacion.intervalo_confianza(80, 30, 5.83, 1.92)
+    print(arr)
 
 
 ejercicio_1()
+ejercicio_3()

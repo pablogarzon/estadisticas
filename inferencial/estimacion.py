@@ -6,8 +6,15 @@ def calcular_z(NC=95):
     z_alfa2 = (1 + NC*1.0/100)/2
     return round(stats.norm.ppf(z_alfa2),2)
 
-def error(NC, S, n):
-    return round((calcular_z(NC) * S)/math.sqrt(n), 2)
+def error(NC, n, s):
+    return round((calcular_z(NC) * s)/math.sqrt(n), 2)
+
+def intervalo_confianza(NC, n, x, s):
+    e = error(NC, n, s)
+    l_min = x - e
+    l_max = x + e
+    arr = [l_min,l_max] 
+    return arr
 
 def tamanio_muestra(Z, P, e):
     """
