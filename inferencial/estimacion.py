@@ -2,9 +2,15 @@
 from scipy import stats
 import math
 
+def z_alfa2(NC):
+    return (1 + NC*1.0/100)/2
+
 def calcular_z(NC=95):
-     z_alfa2 = (1 + NC*1.0/100)/2
-     return round(stats.norm.ppf(z_alfa2),2)
+     return round(stats.norm.ppf(z_alfa2(NC)),2)
+
+def error(NC, s, n):
+    z_alfa_2 = z_alfa2(NC)
+
 
 def tamanio_muestra(Z, P, e):
     """

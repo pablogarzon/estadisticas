@@ -65,7 +65,7 @@ def moda(arr):
                 max_ = count
                 mode = arr[i]
         else:
-            #se agrega al diccionario
+            #sino se agrega al diccionario
             dict_[arr[i]] = 1
     return mode
 
