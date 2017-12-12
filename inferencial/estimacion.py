@@ -7,13 +7,19 @@ def calcular_z(NC=95):
     return round(stats.norm.ppf(z_alfa2),2)
 
 def error(NC, n, s):
+    """
+    #e = z * σ/√n
+    """
     return round((calcular_z(NC) * s)/math.sqrt(n), 2)
 
 def intervalo_confianza(NC, n, x, s):
+    """
+    #[µ-e , µ+e]
+    """
     e = error(NC, n, s)
     l_min = x - e
     l_max = x + e
-    arr = [l_min,l_max] 
+    arr = [l_min,l_max]
     return arr
 
 def tamanio_muestra(Z, P, e):

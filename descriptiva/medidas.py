@@ -31,7 +31,7 @@ def mediana(arr):
     x = (len(arr) + 1)/2
 
     if (len(arr) % 2 == 0):
-        #si el largo del array se promedian los valores centrales
+        #si el largo del array es par se promedian los valores centrales
         me1 = int(x) - 1
         me2 = math.ceil(x) - 1
         me = (arr[me1] + arr[me2])/2
