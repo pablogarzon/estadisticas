@@ -10,10 +10,9 @@ from inferencial import estimacion
 # Precisión = 3%
 # Valor esperado = 5%
 def ejercicio_1():
-    N=10000
-    NC=95
-    e= 0.03
-    P=0.05
+    NC = 95
+    e = 0.03
+    P = 0.05
 
     Z = estimacion.calcular_z(NC)
     print("z: " + str(Z))
@@ -32,6 +31,7 @@ def ejercicio_1():
 def ejercicio_2():
     x0 = 500 - 6
     x1 = 500 + 6
+
 
 def ejercicio_3():
     arr = estimacion.intervalo_confianza(80, 30, 5.83, 1.92)

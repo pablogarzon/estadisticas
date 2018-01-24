@@ -1,6 +1,7 @@
 # coding=utf-8
 import math
 
+
 def media(arr):
     """
     descripción:
@@ -14,7 +15,8 @@ def media(arr):
     for xi in arr:
         sum_xi += xi
 
-    return round(sum_xi/len(arr),2)
+    return round(sum_xi / len(arr), 2)
+
 
 def mediana(arr):
     """
@@ -26,19 +28,20 @@ def mediana(arr):
     retorna:
     número con 2 decimales
     """
-    me=0
+    me = 0
     arr.sort()
-    x = (len(arr) + 1)/2
+    x = (len(arr) + 1) / 2
 
     if (len(arr) % 2 == 0):
-        #si el largo del array es par se promedian los valores centrales
+        # si el largo del array es par se promedian los valores centrales
         me1 = int(x) - 1
         me2 = math.ceil(x) - 1
-        me = (arr[me1] + arr[me2])/2
+        me = (arr[me1] + arr[me2]) / 2
     else:
         me = arr[x]
 
-    return round(me,2)
+    return round(me, 2)
+
 
 def moda(arr):
     """
@@ -52,22 +55,23 @@ def moda(arr):
     mode = 0
     dict_ = dict()
 
-    #ordenar el array
+    # ordenar el array
     arr.sort()
     for i in list(range(len(arr))):
-        #si el valor examinado existe en el diccionario
+        # si el valor examinado existe en el diccionario
         if arr[i] in dict_:
             count = dict_[arr[i]]
-            #se le suma 1 al contador de ese valor
+            # se le suma 1 al contador de ese valor
             count = count + 1
             dict_[arr[i]] = count
             if count > max_:
                 max_ = count
                 mode = arr[i]
         else:
-            #sino se agrega al diccionario
+            # sino se agrega al diccionario
             dict_[arr[i]] = 1
     return mode
+
 
 def varianza(arr):
     """
@@ -83,7 +87,8 @@ def varianza(arr):
     for xi in arr:
         sum_xx += xi * xi
 
-    return round(sum_xx/len(arr) - (media(arr) * media(arr)),2)
+    return round(sum_xx / len(arr) - (media(arr) * media(arr)), 2)
+
 
 def desv_standard(arr):
     """
@@ -94,7 +99,8 @@ def desv_standard(arr):
     retorna:
     número con 2 decimales
     """
-    return round(math.sqrt(varianza(arr)),2)
+    return round(math.sqrt(varianza(arr)), 2)
+
 
 def coeficiente_variacion(arr):
     """
@@ -112,7 +118,8 @@ def coeficiente_variacion(arr):
     dv = desv_standard(arr)
     me = media(arr)
 
-    return round(dv/me * 100, 2)
+    return round(dv / me * 100, 2)
+
 
 def asimetria(arr):
     """
@@ -133,7 +140,8 @@ def asimetria(arr):
 
     result = (sum_ / len(arr)) / (deviation * deviation * deviation)
 
-    return round(result,2)
+    return round(result, 2)
+
 
 def curtosis(arr):
     """
