@@ -28,6 +28,7 @@ def mediana(arr):
     retorna:
     número con 2 decimales
     """
+
     me = 0
     arr.sort()
     x = (len(arr) + 1) / 2
@@ -147,10 +148,11 @@ def curtosis(arr):
     """
     descripción:
     indica el grado de apuntalamiento de una distribución
-    # sₖ = ((∑(xᵢ - ̅x)⁴ * ⨍ᵢ)/n)/s⁴
+    # sₖ = ((∑(xᵢ - ̅x)⁴ * ⨍ᵢ)/n)/s⁴
 
     retorna:
     g = 0 (g ± 0.5) -> distribución mesocúrtica (dist. normal)
     g > 0 -> distribución leptocúrtica (dist. estrecha)
     g < 0 -> distribución platicúrtica (dist. ancha)
     """
+    pass

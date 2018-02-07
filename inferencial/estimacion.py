@@ -48,8 +48,8 @@ def tamanio_muestra_ajustado(Z, P, N, e):
     @N -- tamaño de población
     @e -- error max permitido
     """
-    Q = 1 - P
-    n0 = calular_tamanio_muestra(Z, P, e)
+
+    n0 = tamanio_muestra(Z, P, e)
     # n ajustado
     n1 = n0 / (1 + (n0 - 1) / N)
     return int(math.ceil(n1))

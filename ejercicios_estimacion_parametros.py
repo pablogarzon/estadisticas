@@ -29,8 +29,9 @@ def ejercicio_1():
 # |e| > 6
 # u = x
 def ejercicio_2():
-    x0 = 500 - 6
-    x1 = 500 + 6
+    # x0 = 500 - 6
+    # x1 = 500 + 6
+    pass
 
 
 def ejercicio_3():
